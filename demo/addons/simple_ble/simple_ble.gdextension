@@ -5,12 +5,6 @@ compatibility_minimum ="4.1"
 
 [libraries]
 
-macos.debug = "res://bin/libgodotsimpleble.macos.debug.framework"
-macos.release = "res://bin/libgodotsimpleble.macos.release.framework"
-windows.debug.x86_32 = "res://bin/libgodotsimpleble.windows.debug.x86_32.dll"
-windows.release.x86_32 = "res://bin/libgodotsimpleble.windows.release.x86_32.dll"
-windows.debug.x86_64 = "res://bin/libgodotsimpleble.windows.debug.x86_64.dll"
-windows.release.x86_64 = "res://bin/libgodotsimpleble.windows.release.x86_64.dll"
 linux.debug.x86_64 = "res://bin/libgodotsimpleble.linux.debug.x86_64.so"
 linux.release.x86_64 = "res://simple_ble/bin/libgodotsimpleble.linux.release.x86_64.so"
 linux.debug.arm64 = "res://bin/libgodotsimpleble.linux.debug.arm64.so"
