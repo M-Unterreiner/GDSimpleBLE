@@ -52,7 +52,7 @@ import/fbx/enabled=false
 
 [native_extensions]
 
-paths=["res://example.gdextension"]
+paths=["res://simple_ble.gdextension"]
 
 [rendering]
 
