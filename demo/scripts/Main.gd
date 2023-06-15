@@ -7,7 +7,7 @@ extends Control
 
 # Handlers
 # @onready var _ble_adapter : BLEAdapter = $BLEAdapter
-@onready var _terminal = get_node("scripts/Terminal")
+@onready var _terminal = $Terminal
 
 @onready var _connect : Button = $Controls/ConnectScan/Connect
 #@onready var _infos : Button = $Controls/ConnectScan/Infos
