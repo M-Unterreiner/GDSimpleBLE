@@ -6,7 +6,7 @@ extends Control
 
 
 # Handlers
-@onready var _ble_adapter : BLEAdapter = $BLEAdapter
+# @onready var _ble_adapter : BLEAdapter = $BLEAdapter
 @onready var _terminal : Terminal = $Terminal
 
 @onready var _connect : Button = $Controls/ConnectScan/Connect
