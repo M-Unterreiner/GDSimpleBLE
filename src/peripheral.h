@@ -20,7 +20,6 @@ class BLEPeripheral : public Object {
 
 	// Private attributs
 	private:
-
 		/**
 		 * The peripheral
 		 */
@@ -193,6 +192,11 @@ class BLEPeripheral : public Object {
 		 * Constructor
 		 */
 		BLEPeripheral() = default;
+
+		/**
+		 * Destructor
+		 */
+		~BLEPeripheral();
 
 		/**
 		 * Constructor
