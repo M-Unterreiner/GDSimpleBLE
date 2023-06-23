@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UTILS_H
+#define UTILS_H
 
 // We don't need windows.h in this plugin but many others do and it throws up on itself all the time
 // So best to include it and make sure CI warns us when we use something Microsoft took for their own goals....
@@ -54,6 +55,11 @@ class BLEUtils : public Object {
 		BLEUtils() = default;
 
 		/**
+		 * Destructor
+		 */
+		~BLEUtils() = default;
+
+		/**
 		 * Get manufacturer data as dictionary
 		 * @param p_manufacturer_data manufacturer data
 		 * @return manufacturer data as dictionary
@@ -95,3 +101,5 @@ class BLEUtils : public Object {
 		 */
 		static String get_company_name(const int p_code);
 };
+
+#endif // UTILS_H
