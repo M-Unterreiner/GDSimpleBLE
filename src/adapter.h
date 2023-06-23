@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BLEADAPTER_H
+#define BLEADAPTER_H
 
 // We don't need windows.h in this plugin but many others do and it throws up on itself all the time
 // So best to include it and make sure CI warns us when we use something Microsoft took for their own goals....
@@ -169,3 +170,5 @@ class BLEAdapter : public Node {
 		 */
 		void emit_peripheral_indicate(const BLEPeripheral* p_peripheral, const PackedByteArray& p_payload);
 };
+
+#endif // BLEADAPTER_H
