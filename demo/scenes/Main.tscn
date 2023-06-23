@@ -83,104 +83,70 @@ metadata/_edit_layout_mode = 1
 
 [node name="ConnectScan" type="HBoxContainer" parent="Controls"]
 layout_mode = 2
-offset_right = 1132.0
-offset_bottom = 31.0
 alignment = 1
 
 [node name="Scan" type="Button" parent="Controls/ConnectScan"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-offset_right = 290.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "Scan"
 
 [node name="Connect" type="Button" parent="Controls/ConnectScan"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-offset_left = 294.0
-offset_right = 584.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "Connect"
 
 [node name="Infos" type="Button" parent="Controls/ConnectScan"]
 layout_mode = 2
-offset_left = 588.0
-offset_right = 878.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "Infos"
 
 [node name="Options" type="HBoxContainer" parent="Controls/ConnectScan"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
-offset_left = 882.0
-offset_right = 1132.0
-offset_bottom = 31.0
 alignment = 1
 
 [node name="Update" type="CheckButton" parent="Controls/ConnectScan/Options"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-offset_right = 123.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "Update"
 
 [node name="Advance" type="CheckButton" parent="Controls/ConnectScan/Options"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-offset_left = 127.0
-offset_right = 250.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "Advance"
 
 [node name="Connection" type="HBoxContainer" parent="Controls"]
 layout_mode = 2
-offset_top = 35.0
-offset_right = 1132.0
-offset_bottom = 66.0
 alignment = 1
 
 [node name="Peripheral" type="LineEdit" parent="Controls/Connection"]
 layout_mode = 2
-offset_right = 374.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "823A7171-DD98-45E8-C0CD-5D272E51A0AE"
 placeholder_text = "Peripheral"
 
 [node name="Service" type="LineEdit" parent="Controls/Connection"]
 layout_mode = 2
-offset_left = 378.0
-offset_right = 753.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
 placeholder_text = "Service"
 
 [node name="Characteristic" type="LineEdit" parent="Controls/Connection"]
 layout_mode = 2
-offset_left = 757.0
-offset_right = 1132.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 text = "6E400004-B5A3-F393-E0A9-E50E24DCCA9E"
 placeholder_text = "Characteristic"
 
 [node name="Interactions" type="HBoxContainer" parent="Controls"]
 layout_mode = 2
-offset_top = 70.0
-offset_right = 1132.0
-offset_bottom = 101.0
 alignment = 1
 
 [node name="Notify" type="Button" parent="Controls/Interactions"]
 layout_mode = 2
-offset_right = 280.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 disabled = true
 toggle_mode = true
@@ -188,31 +154,30 @@ text = "Notify"
 
 [node name="Read" type="Button" parent="Controls/Interactions"]
 layout_mode = 2
-offset_left = 284.0
-offset_right = 564.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 disabled = true
 text = "Read"
 
 [node name="Send" type="Button" parent="Controls/Interactions"]
 layout_mode = 2
-offset_left = 568.0
-offset_right = 848.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 disabled = true
 text = "Send"
 
 [node name="Data" type="LineEdit" parent="Controls/Interactions"]
 layout_mode = 2
-offset_left = 852.0
-offset_right = 1132.0
-offset_bottom = 31.0
 size_flags_horizontal = 3
 placeholder_text = "Data to send"
 
 [node name="BLEAdapter" type="BLEAdapter" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+editor_description = ""
+script = null
 
 [connection signal="pressed" from="Controls/ConnectScan/Scan" to="." method="_on_scan_pressed"]
 [connection signal="pressed" from="Controls/ConnectScan/Connect" to="." method="_on_connect_pressed"]
@@ -220,13 +185,3 @@ placeholder_text = "Data to send"
 [connection signal="toggled" from="Controls/Interactions/Notify" to="." method="_on_notify_toggled"]
 [connection signal="pressed" from="Controls/Interactions/Read" to="." method="_on_read_pressed"]
 [connection signal="pressed" from="Controls/Interactions/Send" to="." method="_on_send_pressed"]
-[connection signal="adapter_error_status_updated" from="BLEAdapter" to="." method="_on_ble_adapter_adapter_error_status_updated"]
-[connection signal="peripheral_connected" from="BLEAdapter" to="." method="_on_ble_adapter_peripheral_connected"]
-[connection signal="peripheral_disconnected" from="BLEAdapter" to="." method="_on_ble_adapter_peripheral_disconnected"]
-[connection signal="peripheral_error_status_updated" from="BLEAdapter" to="." method="_on_ble_adapter_peripheral_error_status_updated"]
-[connection signal="peripheral_found" from="BLEAdapter" to="." method="_on_ble_adapter_peripheral_found"]
-[connection signal="peripheral_indicated" from="BLEAdapter" to="." method="_on_ble_adapter_peripheral_indicated"]
-[connection signal="peripheral_notified" from="BLEAdapter" to="." method="_on_ble_adapter_peripheral_notified"]
-[connection signal="peripheral_updated" from="BLEAdapter" to="." method="_on_ble_adapter_peripheral_updated"]
-[connection signal="scan_started" from="BLEAdapter" to="." method="_on_ble_adapter_scan_started"]
-[connection signal="scan_stopped" from="BLEAdapter" to="." method="_on_ble_adapter_scan_stopped"]
