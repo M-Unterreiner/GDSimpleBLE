@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PERIPHERAL_H
+#define PERIPHERAL_H
 
 // We don't need windows.h in this plugin but many others do and it throws up on itself all the time
 // So best to include it and make sure CI warns us when we use something Microsoft took for their own goals....
@@ -275,3 +276,5 @@ class BLEPeripheral : public Object {
 		 */
 		bool get_is_connected() const;
 };
+
+#endif // PERIPHERAL_H
