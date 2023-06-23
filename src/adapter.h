@@ -22,9 +22,6 @@ class BLEAdapter : public Node {
 
 	// Private attributs
 	private:
-		BLEAdapter();
-		~BLEAdapter();
-
 		/**
 		 * The current adapter
 		 */
