@@ -67,16 +67,16 @@ void BLEPeripheral::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("unsubscribe"), &BLEPeripheral::unsubscribe);
 	
 	// Read only
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "address"), nullptr, "get_address");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "identifier"), nullptr, "get_identifier");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "rssi"), nullptr, "get_rssi");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "is_connected"), nullptr, "get_is_connected");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "is_connectable"), nullptr, "get_is_connectable");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "services_count"), nullptr, "get_services_count");
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "services"), nullptr, "get_services");
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "manufacturer_data"), nullptr, "get_manufacturer_data");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "is_paired"), nullptr, "get_is_paired");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "has_no_identifier"), nullptr, "get_has_no_identifier");
+	ADD_PROPERTY(PropertyInfo(Variant::STRING, "address"), "get_address", "get_address");
+	ADD_PROPERTY(PropertyInfo(Variant::STRING, "identifier"), "get_identifier", "get_identifier");
+	ADD_PROPERTY(PropertyInfo(Variant::INT, "rssi"), "get_rssi", "get_rssi");
+	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "is_connected"), "get_is_connected", "get_is_connected");
+	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "is_connectable"), "get_is_connectable", "get_is_connectable");
+	ADD_PROPERTY(PropertyInfo(Variant::INT, "services_count"), "get_services_count", "get_services_count");
+	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "services"), "get_services", "get_services");
+	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "manufacturer_data"), "get_manufacturer_data", "get_manufacturer_data");
+	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "is_paired"), "get_is_paired", "get_is_paired");
+	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "has_no_identifier"), "get_has_no_identifier", "get_has_no_identifier");
 }
 
 void BLEPeripheral::update(SimpleBLE::Peripheral& p_peripheral) {
