@@ -46,10 +46,10 @@ void BLEAdapter::_bind_methods() {
 	
 	// Static
 	ClassDB::bind_static_method("BLEAdapter", D_METHOD("get_adapters"), &BLEAdapter::get_adapters);
-	
+
 	// Bind properties
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "peripherals"), nullptr, "get_peripherals");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "connected_peripherals"), nullptr, "get_connected_peripherals");
+	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "peripherals"),"get_peripherals" , "get_peripherals");
+	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "connected_peripherals"), "get_connected_peripherals", "get_connected_peripherals");
 
 	// Add adapter signals
 	ADD_SIGNAL(MethodInfo("scan_started"));
